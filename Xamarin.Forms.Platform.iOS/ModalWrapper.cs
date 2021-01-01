@@ -155,6 +155,16 @@ namespace Xamarin.Forms.Platform.iOS
 			return ChildViewControllers?.LastOrDefault();
 		}
 
+		public override UIViewController ChildViewControllerForStatusBarHidden()
+		{
+			return ChildViewControllers?.LastOrDefault();
+		}
+
+		public override UIViewController ChildViewControllerForHomeIndicatorAutoHidden
+		{
+			get => ChildViewControllers?.LastOrDefault();
+		}
+
 		void OnModalPagePropertyChanged(object sender, PropertyChangedEventArgs e)
 		{
 			if (e.PropertyName == Page.BackgroundColorProperty.PropertyName)
